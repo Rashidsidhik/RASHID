@@ -11682,3 +11682,19 @@ pre .code {
   display: block;
   margin-top: 10px;
 }
+.form-group span
+{
+
+bottom: 12px;
+right: 17px;
+font-size: 14px;
+color: red;
+}
+#submit-error
+{
+  color: red;
+}
+.form-group span i
+{
+  color: seagreen;
+}
