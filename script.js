@@ -45,23 +45,23 @@ function validateEmail()
 }
 
 function validateMessage()
-{
+{ 
     var message=document.getElementById('contact-Message').value;
     var required=30;
     var left = required - message.length;
 
-    if(left > 0)
-    {
+     if(left > 0)
+     {
         messageError.innerHTML = left + 'subject letters needed';
         return false;
-    }
+      }
      messageError.innerHTML='<i class="fa fa-check-circle-o"></i>';
      return true;
 }
 
 function validateForm()
 {
-    if(!validateName() || !validateEmail()   )
+    if(!validateName() || !validateEmail() || !validateMessage()  )
     {
         submitError.innerHTML = 'please fill all to submit';
         return false;
