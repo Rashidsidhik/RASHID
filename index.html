@@ -6,6 +6,7 @@
     <meta name="description" content="Start your development with JohnDoe landing page.">
     <meta name="author" content="Devcrud">
     <title>RASHID SIDHIK</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + JohnDoe main styles -->
@@ -411,16 +412,20 @@
                         <h4 class="contact-title">Send a message</h4>
                         <form id="submit-form" action="">
                             <div class="form-group">
-                                <input  class="form-control" type="text"name="name"placeholder="Name *" required>
+                                <input  class="form-control" type="text"name="name"placeholder="Name *" required id="contact-name" onkeyup="validateName()" >
+                                <span id="name-error"></span>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="email"name="email"placeholder="Email *" required>
+                                <input class="form-control" type="email"name="email"placeholder="Email *" required id="contact-email" onkeyup="validateEmail()">
+                                <span id="email-error"></span>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" id="" name="message"  placeholder="Message *" rows="7" required></textarea>
+                                <textarea class="form-control" id="" name="message"  placeholder="Message *" rows="7" required id="contact-Message" onkeyup="validateMessage()"></textarea>
+                                <span id="message-error"></span>
                             </div>
                             <div class="form-group ">
-                                <button type="submit" class="form-control btn btn-primary" >Send Message</button>
+                                <button type="submit" class="form-control btn btn-primary" onclick="return validateForm()" >Send Message</button>
+                                <span id="submit-error"></span>
                             </div>
                         </form>
                     </div>
@@ -506,6 +511,6 @@
             })
         })
     </script>
-
+<script src="script.js"> </script>
 </body>
 </html>
